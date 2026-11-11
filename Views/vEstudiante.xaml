@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ddelgadoS6.Views.vEstudiante"
+             Title="vEstudiante">
+    <VerticalStackLayout>
+        <Label 
+            Text="Semana 6: Servicios web - Estudiante"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="20"/>
+
+        <!-- ENCABEZADOS -->
+        <Grid ColumnDefinitions="*,*,*,*"
+              BackgroundColor="Yellow"
+              Padding="5">
+
+            <Label Text="Codigo"
+                   Grid.Column="0"
+                   FontAttributes="Bold"
+                   FontSize="12"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="Nombre"
+                   Grid.Column="1"
+                   FontAttributes="Bold"
+                   FontSize="12"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="Apellido"
+                   Grid.Column="2"
+                   FontAttributes="Bold"
+                   FontSize="12"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="Edad"
+                   Grid.Column="3"
+                   FontAttributes="Bold"
+                   FontSize="12"
+                   HorizontalTextAlignment="Center"/>
+
+        </Grid>
+
+        <!-- LISTVIEW -->
+        <ListView x:Name="listaEstudiante"
+                  HasUnevenRows="True"
+                  SeparatorColor="Gray"
+                  BackgroundColor="White">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <ViewCell>
+                        <Grid ColumnDefinitions="*,*,*,*"
+                              Padding="5"
+                              BackgroundColor="White">
+
+                            <Label Text="{Binding codigo}"
+                                   Grid.Column="0"
+                                   FontSize="12"
+                                   TextColor="Black"
+                                   HorizontalTextAlignment="Center"/>
+
+                            <Label Text="{Binding nombre}"
+                                   Grid.Column="1"
+                                   FontSize="12"
+                                   TextColor="Black"
+                                   HorizontalTextAlignment="Center"/>
+
+                            <Label Text="{Binding apellido}"
+                                   Grid.Column="2"
+                                   FontSize="12"
+                                   TextColor="Black"
+                                   HorizontalTextAlignment="Center"/>
+
+                            <Label Text="{Binding edad}"
+                                   Grid.Column="3"
+                                   FontSize="12"
+                                   TextColor="Black"
+                                   HorizontalTextAlignment="Center"/>
+
+                        </Grid>
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>

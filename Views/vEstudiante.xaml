@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ddelgadoS6.Views.vEstudiante"
              Title="vEstudiante">
-    <VerticalStackLayout>
+    <VerticalStackLayout Spacing="20"
+                         Padding="20">
         <Label 
             Text="Semana 6: Servicios web - Estudiante"
             VerticalOptions="Center" 
@@ -42,7 +43,7 @@
         </Grid>
 
         <!-- LISTVIEW -->
-        <ListView x:Name="listaEstudiante"
+        <ListView x:Name="listaEstudiante" ItemSelected="listaEstudiante_ItemSelected"
                   HasUnevenRows="True"
                   SeparatorColor="Gray"
                   BackgroundColor="White">
@@ -86,5 +87,10 @@
             </ListView.ItemTemplate>
 
         </ListView>
+        
+        <Button x:Name="btnAgregarEstudiante"
+                Text="Agregar Estudiante"
+                Clicked="btnAgregarEstudiante_Clicked"/>
+        
     </VerticalStackLayout>
 </ContentPage>

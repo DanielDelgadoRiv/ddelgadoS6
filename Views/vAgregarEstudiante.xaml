@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ddelgadoS6.Views.vAgregarEstudiante"
+             Title="vAgregarEstudiante">
+    <VerticalStackLayout Padding="20"
+                         Spacing="20">
+        <Label 
+            Text="Semana 7: AGREGAR ESTUDIANTE"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="20"/>
+        
+        <Entry x:Name="txtNombre"
+               Placeholder="Ingrese el nombre"/>
+        <Entry x:Name="txtApellido"
+               Placeholder="Ingrese el apellido"/>
+        <Entry x:Name="txtEdad"
+               Placeholder="Ingrese la edad"
+               Keyboard="Numeric"/>
+
+        <Grid ColumnSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <Button x:Name="btnAgregar"
+                    Text="Agregar"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Clicked="btnAgregar_Clicked"/>
+            <Button x:Name="btnCancelar"
+                    Text="Cancelar"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Clicked="btnCancelar_Clicked"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
